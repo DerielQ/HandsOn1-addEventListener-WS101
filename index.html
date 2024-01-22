@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript addEventListener() Hands-On</title>
+
+    <style>
+        body {
+            background: url(b&w.jpg);
+            background-repeat:no-repeat;
+            background-size: 100%;
+        }
+
+        h1{
+            display: flex;
+        }
+
+        p{
+            display: flex;
+        }
+
+        #Btncont {
+            position: absolute;
+            right: -1px;
+        }
+
+        button {
+            margin-top: 20%;
+            padding: 15px 200px;
+            border: none;
+            border-radius: 10px 0 0 10px;
+            font-size: large;
+        }
+
+        @media screen and (max-width: 600px) {
+            button {
+                margin-top: 70%;
+                padding: 15px 30px;
+            }
+            
+            #Btncont {
+                position: absolute;
+                right: -10px;
+            }
+
+            body {
+                background: none;
+                background-color: black;
+            }
+
+            h1, p {
+                background-color: white;
+                padding-top: 5%;
+                margin: 0;
+            }
+        }
+        
+        #btn1 {
+            background-color: aqua;
+            color: black;
+        }
+
+        #btn2 {
+            background-color: orange;
+            color: black;
+        }
+
+        #btn3 {
+            background-color: white;
+            color: black;
+        }
+
+        button:hover {
+            font-weight: bold;
+            box-shadow: 0 5px 15px white;
+        }
+
+        button:active {
+            font-weight: bold;
+            box-shadow: 0 5px 15px white;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript addEventListener() Hands-On</h1>
+    <p>Click on any of the buttons to see different results:</p>
+
+    <div id="Btncont">
+        <div>
+            <button id="btn1">Button 1</button>
+        </div>
+        <div>
+            <button id="btn2">Button 2</button>
+        </div>
+        <div>
+            <button id="btn3">Button 3</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("btn1").addEventListener("click", clickA);
+        document.getElementById("btn2").addEventListener("click", clickB);
+        document.getElementById("btn3").addEventListener("click", clickC);
+        
+        function clickA() {
+            alert("Button 1 was clicked!");
+        }
+        
+        function clickB() {
+            alert("Button 2 was clicked!");
+        }
+        
+        function clickC() {
+            alert("Button 3 was clicked!");
+        }
+    
+    </script>
+</body>
+</html>
